@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #-*-coding:utf-8-*-
-# Made With ❤️ By Dapunta for kerzP
+# Made With ❤️ By Kerz
 
 import requests,mechanize,bs4,sys,os,subprocess,uuid,random,time,re,base64,concurrent.futures,json,ipaddress
 from random import randint
@@ -1301,3 +1301,7 @@ def ress():
         print((k+"["+p+"!"+k+"]"+p+" No Result Found"))
     input(k+"\n[ "+p+"Back"+k+" ]"+p)
     menu()
+
+if __name__=="__main__":
+	os.system("git pull")
+	country() 
